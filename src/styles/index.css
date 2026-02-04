@@ -1,0 +1,64 @@
+/* ============================================================
+   LANDING PAGE — MOBILE FIRST
+   ============================================================ */
+
+/* Main wrapper for the splash screen */
+.landing-wrapper {
+  text-align: center;
+  margin-top: 110px;
+  padding: 0 18px;
+}
+
+/* Main title */
+.landing-title {
+  font-size: 34px;
+  font-weight: 800;
+  margin-bottom: 14px;
+  line-height: 1.15;
+}
+
+/* Loading text */
+.landing-status {
+  font-size: 16px;
+  color: #666;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+/* ============================================================
+   TABLETS & MID-SCREENS — From 480px
+   ============================================================ */
+@media (min-width: 480px) {
+  .landing-wrapper {
+    margin-top: 160px;
+  }
+
+  .landing-title {
+    font-size: 46px;
+  }
+
+  .landing-status {
+    font-size: 18px;
+    max-width: 580px;
+  }
+}
+
+/* ============================================================
+   LARGE SCREENS — From 1440px
+   ============================================================ */
+@media (min-width: 1440px) {
+  .landing-wrapper {
+    margin-top: 220px;
+  }
+
+  .landing-title {
+    font-size: 60px;
+    letter-spacing: -1px;
+  }
+
+  .landing-status {
+    font-size: 22px;
+    max-width: 760px;
+    color: #444;
+  }
+}

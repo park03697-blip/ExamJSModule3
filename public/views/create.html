@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Entry | TaskMaster</title>
+
+    <!-- Global + Page Styles -->
+    <link rel="stylesheet" href="../../src/styles/style.css" />
+    <link rel="stylesheet" href="../../src/styles/create.css" />
+
+    <!-- Creation Logic -->
+    <script type="module" src="../../src/services/create.js"></script>
+  </head>
+
+  <body>
+    <main class="creator-wrapper">
+      <!-- Return Navigation -->
+      <a href="./tasks.html" class="return-link">← Return to List</a>
+
+      <section class="creator-box">
+        <h1 class="creator-title">Add Task</h1>
+
+        <form id="taskCreatorForm">
+          <div class="field-group">
+            <label for="taskName">Task Name</label>
+            <input
+              type="text"
+              id="taskName"
+              name="taskName"
+              placeholder="Example: Prepare weekly summary"
+              required
+            />
+          </div>
+
+          <div class="field-group">
+            <label for="taskArea">Area / Category</label>
+            <input
+              type="text"
+              id="taskArea"
+              name="taskArea"
+              placeholder="Example: Science, Art, Literature"
+              required
+            />
+          </div>
+
+          <div class="field-group">
+            <label for="taskLevel">Priority Level</label>
+            <select id="taskLevel" name="taskLevel" required>
+              <option value="high">High</option>
+              <option value="medium" selected>Medium</option>
+              <option value="low">Low</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label for="taskState">Current State</label>
+            <select id="taskState" name="taskState" required>
+              <option value="pending" selected>Pending</option>
+              <option value="completed">Completed</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label for="taskDeadline">Deadline</label>
+            <input type="date" id="taskDeadline" name="taskDeadline" />
+          </div>
+
+          <div class="field-group">
+            <label for="taskNotes">Notes</label>
+            <textarea
+              id="taskNotes"
+              name="taskNotes"
+              placeholder="Additional information about this task..."
+            ></textarea>
+          </div>
+
+          <!-- Actions -->
+          <div class="action-row">
+            <a href="./tasks.html" class="btn-cancel">Cancel</a>
+            <button type="submit" class="btn-submit">Create</button>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

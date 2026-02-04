@@ -1,0 +1,165 @@
+/* ============================================================
+   BASE LAYOUT — MOBILE FIRST
+============================================================ */
+
+/* Main wrapper for the creation page */
+.creator-wrapper {
+  width: 92%;
+  margin: 25px auto;
+  padding: 8px;
+}
+
+/* Card container */
+.creator-box {
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.creator-title {
+  font-size: 22px;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+/* ============================================================
+   FORM FIELDS
+============================================================ */
+
+.field-group {
+  margin-bottom: 18px;
+}
+
+.field-group label {
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.field-group input,
+.field-group select,
+.field-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cfcfcf;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* ============================================================
+   ACTION BUTTONS
+============================================================ */
+
+.action-row {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.btn-cancel,
+.btn-submit {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Cancel button */
+.btn-cancel {
+  background: #e5e5e5;
+  color: #333;
+}
+
+/* Submit button */
+.btn-submit {
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-submit:hover {
+  background: #1e4fc7;
+}
+
+/* ============================================================
+   BACK NAVIGATION
+============================================================ */
+
+.return-link {
+  display: inline-block;
+  margin-bottom: 18px;
+  font-weight: 700;
+  color: #2563eb;
+  text-decoration: none;
+}
+
+/* ============================================================
+   TABLET — From 768px
+============================================================ */
+
+@media (min-width: 768px) {
+  .creator-wrapper {
+    max-width: 620px;
+    margin: 45px auto;
+  }
+
+  .creator-box {
+    padding: 32px;
+  }
+
+  .creator-title {
+    text-align: left;
+    font-size: 24px;
+  }
+
+  .action-row {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .btn-cancel,
+  .btn-submit {
+    width: auto;
+    padding: 10px 22px;
+  }
+}
+
+/* ============================================================
+   DESKTOP — From 1024px
+============================================================ */
+
+@media (min-width: 1024px) {
+  .creator-box {
+    box-shadow: 0 4px 14px rgba(0,0,0,0.07);
+  }
+
+  .field-group input:focus,
+  .field-group select:focus,
+  .field-group textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+  }
+}
+
+/* ============================================================
+   LARGE SCREENS — From 1440px
+============================================================ */
+
+@media (min-width: 1440px) {
+  .creator-wrapper {
+    max-width: 720px;
+  }
+
+  .field-group label {
+    font-size: 15px;
+  }
+}

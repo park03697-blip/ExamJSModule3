@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Overview | TaskMaster</title>
+
+  <!-- Global + Page Styles -->
+  <link rel="stylesheet" href="../../src/styles/style.css">
+  <link rel="stylesheet" href="../../src/styles/task.css">
+
+  <!-- Logic -->
+  <script type="module" src="../../src/services/tasks.js"></script>
+  <script type="module" src="../../src/services/guard.js"></script>
+</head>
+
+<body>
+  <div class="layout-shell">
+
+    <!-- SIDE NAVIGATION -->
+    <aside class="nav-panel">
+      <div class="nav-brand">
+        <img src="../../src/assets/brandmark.png" alt="Brand Logo" class="brand-logo">
+        <h2 class="brand-text">TaskMaster</h2>
+      </div>
+
+      <nav class="nav-links">
+        <a href="./tasks.html" class="nav-item selected">
+          <img src="../../src/assets/nav_tasks.png" alt="Tasks"> <span>Tasks</span>
+        </a>
+
+        <a href="./profile.html" class="nav-item">
+          <img src="../../src/assets/nav_user.png" alt="Profile"> <span>Profile</span>
+        </a>
+
+        <a href="./admin.html" class="nav-item">
+          <span class="emoji-icon">🛠</span> <span>Admin</span>
+        </a>
+
+        <button id="logoutBtn" class="nav-item logout-btn">Logout</button>
+      </nav>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="content-section">
+
+      <!-- HEADER -->
+      <header class="section-header">
+        <div class="user-display">
+          <strong class="user-name" id="userName">User</strong>
+          <span class="user-role" id="userRole">Role</span>
+        </div>
+      </header>
+
+      <div class="task-wrapper">
+
+        <!-- TITLE + ACTION -->
+        <section class="header-block">
+          <div class="header-info">
+            <h1 class="page-title">Task Overview</h1>
+            <p class="page-subtitle">Manage, track and update all your tasks efficiently.</p>
+          </div>
+
+          <a href="../views/create.html" class="btn-create">+ Add Task</a>
+        </section>
+
+        <!-- METRICS -->
+        <section class="stats-grid">
+
+          <div class="stat-box">
+            <div class="stat-info">
+              <p>Total</p>
+              <span id="totalCount">0</span>
+            </div>
+            <img src="../../src/assets/stat_total.png" alt="Total">
+          </div>
+
+          <div class="stat-box">
+            <div class="stat-info">
+              <p>Pending</p>
+              <span id="pendingCount">0</span>
+            </div>
+            <img src="../../src/assets/stat_pending.png" alt="Pending">
+          </div>
+
+          <div class="stat-box">
+            <div class="stat-info">
+              <p>Completed</p>
+              <span id="doneCount">0</span>
+            </div>
+            <img src="../../src/assets/stat_done.png" alt="Completed">
+          </div>
+
+          <div class="stat-box progress-box">
+            <div class="progress-info">
+              <p>Progress</p>
+              <span id="progressRate">0%</span>
+            </div>
+            <img src="../../src/assets/stat_progress.png" alt="Progress" class="progress-img">
+          </div>
+
+        </section>
+
+        <!-- FILTERS -->
+        <section class="filter-controls">
+          <button class="filter-chip active" data-filter="all">All</button>
+          <button class="filter-chip" data-filter="pending">Pending</button>
+          <button class="filter-chip" data-filter="completed">Completed</button>
+        </section>
+
+        <!-- TABLE -->
+        <section class="table-wrapper">
+          <table class="task-table">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Details</th>
+                <th>User ID</th>
+                <th>Status</th>
+                <th>Priority</th>
+                <th>Due</th>
+                <th>Options</th>
+              </tr>
+            </thead>
+
+            <tbody id="taskTableBody">
+              <!-- Filled dynamically -->
+            </tbody>
+          </table>
+        </section>
+
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>

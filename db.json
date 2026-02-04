@@ -1,0 +1,30 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Admin",
+      "email": "admin@admin.com",
+      "password": "123456",
+      "role": "admin"
+    },
+    {
+      "id": "a59c",
+      "name": "Luisa fernadad",
+      "email": "lgrisales04@gmail.com",
+      "password": "123456",
+      "role": "user"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "b61d",
+      "title": "barrer",
+      "category": "Casa",
+      "priority": "high",
+      "status": "completed",
+      "dueDate": "2000-01-10",
+      "description": "asdasd",
+      "userId": "a59c"
+    }
+  ]
+}

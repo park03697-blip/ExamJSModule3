@@ -1,0 +1,168 @@
+/* ============================================================
+   PROFILE PAGE — MOBILE FIRST
+   ============================================================ */
+
+/* Main wrapper for profile layout */
+.profile-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: 18px;
+}
+
+/* Sidebar summary + details card */
+.summary-card,
+.details-card {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 26px 18px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+/* Grid for personal info */
+.details-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 22px;
+}
+
+/* Header inside details card */
+.details-header {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  text-align: center;
+}
+
+/* Role badge */
+.badge-role {
+  background: #2563eb;
+  color: #ffffff;
+  padding: 4px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+/* ============================================================
+   TABLETS — From 768px
+   ============================================================ */
+@media (min-width: 768px) {
+  .profile-wrapper {
+    padding: 30px;
+  }
+
+  .details-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .details-header {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+/* ============================================================
+   DESKTOP — From 1024px
+   ============================================================ */
+@media (min-width: 1024px) {
+  .profile-wrapper {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 32px;
+    align-items: start;
+  }
+
+  .summary-card {
+    padding: 40px 22px;
+  }
+}
+
+/* ============================================================
+   LARGE SCREENS — From 1440px
+   ============================================================ */
+@media (min-width: 1440px) {
+  .profile-wrapper {
+    grid-template-columns: 400px 1fr;
+    gap: 50px;
+  }
+
+  .details-grid {
+    gap: 40px 60px;
+  }
+
+  .detail-item label {
+    font-size: 14px;
+  }
+
+  .detail-item p {
+    font-size: 17px;
+  }
+}
+
+/* ============================================================
+   SHARED COMPONENTS
+   ============================================================ */
+
+/* Contact info block */
+.summary-contact {
+  margin: 20px 0;
+  padding: 15px;
+  background: #f8fafc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+/* Task count block */
+.summary-tasks {
+  border-top: 1px solid #e2e8f0;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.summary-tasks strong {
+  font-size: 24px;
+  display: block;
+}
+
+/* Detail item */
+.detail-item label {
+  display: block;
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.detail-item p {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+/* Department tag */
+.dept-tag {
+  background: #fef3c7;
+  color: #d97706;
+  padding: 4px 12px;
+  border-radius: 6px;
+}
+
+/* Edit button */
+.btn-edit {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.btn-edit:hover {
+  background: #f8fafc;
+}

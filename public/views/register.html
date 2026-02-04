@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account | TaskMaster</title>
+
+  <!-- Global Styles -->
+  <link rel="stylesheet" href="../../src/styles/style.css">
+  <link rel="stylesheet" href="../../src/styles/register.css">
+
+  <!-- Registration Logic -->
+  <script type="module" src="../../src/services/auth.js"></script>
+</head>
+
+<body>
+
+  <main class="signup-wrapper">
+
+    <section class="signup-box">
+      <h2 class="signup-title">Register New User</h2>
+      <p class="signup-subtitle">Create your access to the task system</p>
+
+      <form id="signupForm">
+
+        <div class="input-field">
+          <label for="regFullName">Full Name</label>
+          <input type="text" id="regFullName" placeholder="Jane Smith" required>
+        </div>
+
+        <div class="input-field">
+          <label for="regEmail">Email Address</label>
+          <input type="email" id="regEmail" placeholder="example@mail.com" required>
+        </div>
+
+        <div class="input-field">
+          <label for="regPass">Password</label>
+          <input type="password" id="regPass" placeholder="Enter a secure password" required>
+        </div>
+
+        <div class="input-field">
+          <label for="regPassConfirm">Confirm Password</label>
+          <input type="password" id="regPassConfirm" placeholder="Repeat your password" required>
+        </div>
+
+        <button type="submit" class="signup-btn">Create Account</button>
+      </form>
+
+      <footer class="signup-footer">
+        <span>Already registered?</span>
+        <a href="../../public/views/login.html">Log in</a>
+      </footer>
+
+    </section>
+
+  </main>
+
+</body>
+</html>

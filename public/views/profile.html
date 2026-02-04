@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Panel | TaskMaster</title>
+
+  <!-- Global + Page Styles -->
+  <link rel="stylesheet" href="../../src/styles/style.css">
+  <link rel="stylesheet" href="../../src/styles/profile.css">
+
+  <!-- Access Control + Profile Logic -->
+  <script type="module" src="../../src/services/guard.js"></script>
+  <script type="module" src="../../src/services/profile.js"></script>
+</head>
+
+<body>
+  <div class="layout-shell">
+
+    <!-- SIDE MENU -->
+    <aside class="nav-panel">
+      <div class="nav-brand">
+        <img src="../../src/assets/brandmark.png" alt="Brand Logo" class="brand-logo">
+        <h2 class="brand-text">TaskMaster</h2>
+      </div>
+
+      <nav class="nav-links">
+        <a href="./tasks.html" class="nav-item">
+          <img src="../../src/assets/nav_tasks.png" alt="Tasks"> <span>Tasks</span>
+        </a>
+
+        <a href="./profile.html" class="nav-item selected">
+          <img src="../../src/assets/nav_user.png" alt="Profile"> <span>Profile</span>
+        </a>
+
+        <a href="./admin.html" class="nav-item">
+          <span class="emoji-icon">🛠</span> <span>Admin</span>
+        </a>
+
+        <button id="logoutBtn" class="nav-item logout-btn">Logout</button>
+      </nav>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="content-section">
+
+      <!-- HEADER -->
+      <header class="section-header">
+        <h1 class="section-title">User Profile</h1>
+      </header>
+
+      <div class="profile-wrapper">
+
+        <!-- LEFT: SUMMARY CARD -->
+        <section class="summary-card">
+          <h2 id="mainUserName"></h2>
+          <span id="mainUserBadge" class="badge-role"></span>
+
+          <div class="summary-contact">
+            <p id="mainUserEmail"></p>
+          </div>
+
+          <div class="summary-tasks">
+            <strong id="assignedCount">0</strong>
+            <span>Assigned Tasks</span>
+          </div>
+        </section>
+
+        <!-- RIGHT: DETAILS CARD -->
+        <section class="details-card">
+
+          <div class="details-header">
+            <h3>Account Details</h3>
+            <button class="btn-edit">Modify</button>
+          </div>
+
+          <div class="details-grid">
+
+            <div class="detail-item">
+              <label>Full Name</label>
+              <p id="detailName">Sarah Jenkins</p>
+            </div>
+
+            <div class="detail-item">
+              <label>User ID</label>
+              <p id="detailId">CZ-882103</p>
+            </div>
+
+            <div class="detail-item">
+              <label>Phone</label>
+              <p id="detailPhone">+1 (555) 123-4567</p>
+            </div>
+
+            <div class="detail-item">
+              <label>Department</label>
+              <p><span id="detailDept" class="dept-tag">Computer Science</span></p>
+            </div>
+
+            <div class="detail-item">
+              <label>Role</label>
+              <p id="detailRole">Senior Administrator</p>
+            </div>
+
+            <div class="detail-item">
+              <label>Joined</label>
+              <p id="detailJoin">September 14, 2020</p>
+            </div>
+
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+</body>
+</html>

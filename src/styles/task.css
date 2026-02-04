@@ -1,0 +1,212 @@
+/* ============================================================
+   TASK PAGE — MOBILE FIRST
+   ============================================================ */
+
+/* Header bar with user info */
+.section-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: #ffffff;
+  padding: 16px 24px;
+  border-bottom: 1px solid #e2e2e2;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  border-radius: 8px;
+}
+
+.user-display {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.user-display .user-name {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.user-display .user-role {
+  font-size: 13px;
+  color: #666;
+}
+
+.header-block{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
+/* ============================================================
+   FILTERS
+   ============================================================ */
+.filter-controls {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.filter-chip {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid #cfcfcf;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.filter-chip.active {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+}
+
+/* ============================================================
+   STATUS & PRIORITY TAGS
+   ============================================================ */
+.status-tag,
+.priority-tag {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: #ffffff;
+  display: inline-block;
+}
+
+/* Status colors */
+.status-tag.pending {
+  background: #ffca2c;
+  color: #333;
+}
+
+.status-tag.completed {
+  background: #28a745;
+}
+
+/* Priority colors */
+.priority-tag.high {
+  background: #dc3545;
+}
+
+.priority-tag.medium {
+  background: #ffca2c;
+  color: #333;
+}
+
+.priority-tag.low {
+  background: #28a745;
+}
+
+/* ============================================================
+   CREATE BUTTON
+   ============================================================ */
+.btn-create {
+  background: #2563eb;
+  color: #ffffff;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.2s ease;
+  display: inline-block;
+}
+
+.btn-create:hover {
+  background: #1e4fc7;
+}
+
+/* ============================================================
+   TABLE WRAPPER
+   ============================================================ */
+.table-wrapper {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+.task-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.task-table th {
+  background: #eef1f7;
+  padding: 14px;
+  font-size: 14px;
+  text-align: left;
+}
+
+.task-table td {
+  padding: 14px;
+  border-bottom: 1px solid #e5e5e5;
+  font-size: 14px;
+}
+
+.task-table button {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background: #e0e0e0;
+  transition: 0.2s ease;
+  margin-right: 6px;
+}
+
+.task-table button:hover {
+  background: #cfcfcf;
+}
+
+/* ============================================================
+   RESPONSIVE — TABLETS (From 768px)
+   ============================================================ */
+@media (min-width: 768px) {
+  .filter-controls {
+    justify-content: flex-end;
+  }
+
+  .btn-create {
+    width: auto;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — DESKTOP (From 1024px)
+   ============================================================ */
+@media (min-width: 1024px) {
+  .section-header {
+    padding: 18px 40px;
+  }
+
+  .user-display .user-name {
+    font-size: 18px;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — LARGE SCREENS (From 1440px)
+   ============================================================ */
+@media (min-width: 1440px) {
+  .task-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .status-tag,
+  .priority-tag {
+    padding: 6px 14px;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — SMALL MOBILE (Below 600px)
+   ============================================================ */
+@media (max-width: 600px) {
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
